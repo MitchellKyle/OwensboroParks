@@ -1,0 +1,305 @@
+/*
+===== General Styles
+*/
+
+html, 
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  color: #4b3832;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+a, p {
+	color: #4b3832;
+	font-family: 'Quicksand', sans-serif;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+body {
+	background-color: #EEEEF2;
+	background-size: cover-all;
+}
+
+ul {
+	list-style: none;
+}
+
+/*
+===== Re-usable Styles
+*/
+
+.container {
+	margin-right: 0;
+}
+
+.container-fluid {
+	max-width: 1000px;
+}
+
+.margins {
+	margin-top: 2em;
+	margin-bottom: 4em;
+}
+
+.round {
+	border-radius: 5px;
+}
+
+.btn-custom {
+	color: #fff;
+	background-color: #FFE334;
+}
+
+/*
+===== Navbar Styles
+*/
+
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-brand {
+	color: #fff;
+	font-size: 1.3em;
+	padding-left: 25px;
+	text-shadow: 1px 1px 1px #000;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+ .navbar-default .navbar-brand:hover {
+ 	font-weight: 600;
+ 	color: #fff;
+ 	text-shadow: 1px 1px 2px #000;
+}
+
+.navbar {
+	margin-bottom: 0;
+	border: none;
+	border-radius: 0;
+}
+
+.navbar-default {
+	background-color: transparent;
+}
+
+.navbar-brand {
+	padding: 0;
+}
+
+#navbar-brand {
+	padding-top: 15px;
+}
+
+.navbar-brand img {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.navbar-inverse {
+	background-color: #4b3832;
+}
+
+.navbar-form {
+	border: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/*
+===== Affix Styles
+*/
+
+/*Navbar*/
+#affix1.affix-top {
+	padding-top: 50px;
+}
+
+#affix1.affix {
+	background-color: rgba(75,56,50, 0.6);
+	top: 0;
+	z-index: 101;
+	position: fixed;
+	float: left;
+	position: fixed;
+	display: inline-block;
+	width: 100%;
+}
+
+/*Search bar*/
+#affix2.affix {
+	top: 0;
+	right: 0;
+	z-index: 101;
+	position: fixed;
+	padding-right: 15px;
+}
+
+/*
+===== Header Styles
+*/
+
+.header {
+	padding-top: 50px;
+	background-image: url('../img/header-bg.jpg');
+	background-position: bottom;
+	height: 450px;
+}
+
+.parks-header,
+.parks-show-header,
+.amenities-show-header,
+.amenities-header {
+	margin-top: 6em;
+	margin-bottom: 4em;
+	font-weight: 700;
+}
+
+.parks-header h1 {
+	font-size: 3em;
+}
+
+.parks-header p,
+.amenities-header p {
+	font-size: 1.1em;
+}
+
+/*
+===== Welcome Header Styles
+*/
+
+.welcome-header {
+	background-image: url('../img/header-bg.jpg');
+	background-position: bottom;
+	height: 600px;
+	padding-top: 50px;
+}
+
+/*
+===== Map Styles
+*/
+
+#map {
+  height: 300px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+}
+
+/*
+===============================
+					Page Styles
+===============================
+*/
+
+/*
+===== Welcome
+*/
+
+.information {
+	border-right: 1px solid #4b3832;
+	padding-left: 0;
+}
+
+.info-list {
+	padding-left: .75em;
+}
+
+.info-list li {
+	padding: .75em 0;
+}
+
+/*
+===== Parks.Index
+*/
+
+.park-sign {
+	margin-bottom: 3em;
+}
+
+.sign-img-bg {
+	background-color:  #8e8e91;
+	padding: 1em 0;
+}
+
+.sign-link-bg {
+	background-color: #d6d6d9;
+	margin-top: .5em;
+	padding: .75em 0;
+}
+
+.park-sign a {
+	display: inline-block;
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+/*
+===============================
+					Media Queries
+===============================
+*/
+
+@media (max-width: 991px) {
+	.information{
+		border-right: none;
+	}
+}
+
+@media (min-width: 768px) {
+	#mobile-header {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+
+	/* Mobile Navbar Styles */
+	#navbar-brand {
+		display: none;
+	}
+
+	#mobile-header {
+		padding-top: 50px;
+		color: #fff;
+	}
+
+	.navbar-nav {
+		margin: 0;
+	}
+
+	.btn-custom {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	/* Affix Styles */
+	#affix1.affix-top {
+		padding: 0;
+	}
+
+	#affix1.affix {
+		display: inline-block;
+	}
+
+	#affix2.affix {
+		z-index: 99;
+		padding-right: 0;
+		position: relative;
+	}
+
+	/* Map Styles */
+
+	#map {
+		margin-top: 25px;
+	}
+}
