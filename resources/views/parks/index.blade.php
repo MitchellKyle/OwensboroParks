@@ -17,11 +17,11 @@ Parks |
 	</div>
 	<div class="row">
 		@foreach ( $parks as $park )
-			<div class="col-sm-4 text-center park-sign">
-				<div class="col-sm-12 sign-img-bg round">
+			<div class="col-md-4 text-center park-sign col-sm-6">
+				<div class="col-md-12 sign-img-bg round">
 					<a href="parks/{{ $park->id }}"><img src="{{ URL::to('/') }}{{ $park->sign_img }}" class="round"></a>
 				</div>
-				<div class="col-sm-12 sign-link-bg round">
+				<div class="col-md-12 sign-link-bg round">
 					<a href="parks/{{ $park->id }}">
 						<h3>{{ $park->name }}</h3>
 					</a>

@@ -21,8 +21,8 @@ a, p {
 }
 
 a:hover {
-	text-decoration: none;
-	color: #fff;
+	text-decoration: underline;
+	color: #4b3832;
 }
 
 body {
@@ -74,9 +74,8 @@ ul {
 
 .navbar-default .navbar-nav>li>a:hover,
  .navbar-default .navbar-brand:hover {
- 	font-weight: 600;
  	color: #fff;
- 	text-shadow: 1px 1px 2px #000;
+ 	text-shadow: -1px -1px 1px #000;
 }
 
 .navbar {
@@ -106,12 +105,12 @@ ul {
 	background-color: #4b3832;
 }
 
+.navbar-right {
+	margin-right: 0;
+}
+
 .navbar-form {
 	border: none;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding-top: 10px;
-	padding-bottom: 10px;
 }
 
 /*
@@ -140,7 +139,6 @@ ul {
 	right: 0;
 	z-index: 101;
 	position: fixed;
-	padding-right: 15px;
 }
 
 /*
@@ -154,13 +152,16 @@ ul {
 	height: 450px;
 }
 
+.welcome-header,
 .parks-header,
 .parks-show-header,
 .amenities-show-header,
 .amenities-header {
 	margin-top: 6em;
 	margin-bottom: 4em;
+	padding-bottom: 4em;
 	font-weight: 700;
+	border-bottom: 1px solid #4b3832; 
 }
 
 .parks-header h1 {
@@ -170,17 +171,6 @@ ul {
 .parks-header p,
 .amenities-header p {
 	font-size: 1.1em;
-}
-
-/*
-===== Welcome Header Styles
-*/
-
-.welcome-header {
-	background-image: url('../img/header-bg.jpg');
-	background-position: bottom;
-	height: 600px;
-	padding-top: 50px;
 }
 
 /*
@@ -244,6 +234,14 @@ ul {
 }
 
 /*
+===== Amenities.Index
+*/
+
+.amenities-list li {
+	padding-top: 10px;
+}
+
+/*
 ===============================
 					Media Queries
 ===============================
@@ -261,25 +259,34 @@ ul {
 	}
 }
 
-@media (max-width: 768px) {
-
-	/* Mobile Navbar Styles */
+@media (max-width: 930px) {
 	#navbar-brand {
 		display: none;
 	}
+}
+
+@media (max-width: 768px) {
+
+	/* Mobile Navbar Styles */
 
 	#mobile-header {
 		padding-top: 50px;
 		color: #fff;
 	}
 
-	.navbar-nav {
+	.navbar-form {
 		margin: 0;
 	}
 
-	.btn-custom {
-		margin-right: auto;
-		margin-left: auto;
+	.navbar-form .form-group {
+		display: inline-block;
+		width: 250px;
+		padding-left: 15px;
+	}
+
+	.navbar-nav {
+		width: 100%;
+		margin: 0;
 	}
 
 	/* Affix Styles */
@@ -287,14 +294,10 @@ ul {
 		padding: 0;
 	}
 
-	#affix1.affix {
-		display: inline-block;
-	}
-
 	#affix2.affix {
 		z-index: 99;
-		padding-right: 0;
-		position: relative;
+		top: 50px;
+		background-color: rgba(75,56,50, 0.6);
 	}
 
 	/* Map Styles */

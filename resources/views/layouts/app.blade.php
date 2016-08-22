@@ -21,7 +21,7 @@
 <body>
 <div class="header">
 	
-		<nav class="navbar navbar-default" role="navigation" id="affix1" data-spy="affix" data-offset-top="99">
+		<nav class="navbar navbar-default" role="navigation" id="affix1">
 		
 			<!-- Brand and toggle get grouped for better mobile display -->
 			
@@ -40,10 +40,7 @@
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
 					<li><a href="/parks">Parks</a></li>
-					<li><a href="#">Facilities</a></li>
-					<li><a href="#">News</a></li>
-					<li><a href="#">Connect</a></li>
-					<li><a href="#">About Us</a></li>
+					<li><a href="/amenities">Amenities</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</nav>
@@ -54,18 +51,13 @@
 	<!-- Search Navbar -->
 
 	<nav class="navbar navbar-inverse">
-		<div class="container">		
-			
-		<div class="navbar-nav navbar-right" id="affix2"  data-spy="affix" data-offset-top="450">
-			
-				<form method="GET" action="search" class="navbar-form navbar-left" role="search">
-					<div class="form-group">
-						<input name="q" type="search" class="form-control" placeholder="Search">
-					</div>
-					<button type="submit" class="btn btn-custom">Submit</button>
-				</form>
-			
-		</div>
+		<div class="navbar-nav navbar-right" id="affix2">
+			<form method="GET" action="search" class="navbar-form navbar-left" role="search">
+				<div class="form-group">
+					<input name="q" type="search" class="form-control" placeholder="Search">
+				</div>
+				<button type="submit" class="btn btn-custom">Submit</button>
+			</form>
 		</div>
 	</nav>
 
@@ -75,11 +67,17 @@
 		@yield('content')
 	</div>
 
+	<footer>
+		
+	</footer>
+
 	<!-- jQuery -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
 
 	<!-- Bootstrap JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
 
   @yield('scripts')
 </body>
